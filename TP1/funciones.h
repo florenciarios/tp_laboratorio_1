@@ -1,14 +1,18 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
-float suma(float, float);
+float plusOp(float, float);
 
-float resta(float, float);
+float minusOp(float, float);
 
-float division(float, float);
+float divideOp(float, float);
 
-float multiplicacion(float, float);
+float multiplyOp(float, float);
 
 int factoreo(float);
+
+void opMissing(int);
+
+
 
 #endif // FUNCIONES_H_INCLUDED

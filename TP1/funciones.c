@@ -1,52 +1,54 @@
 #include <stdio.h>
+
+
 /**
- * \brief realiza la operacion de SUMA de dos float
+ * \brief realiza la operación de SUMA de dos float
  * \param recibe las variables
- * \param suma las variables
+ * \param result = suma las variables
  * \return el resultado de la suma de variables
  *
  */
 
- float suma(float x, float y)
+ float plusOp(float x, float y)
  {
      float result;
 
      result = x + y;
 
-     printf("Suma: %.2f \n",result);
+     printf("\nSuma: %.2f \n\n",result);
 
      return result;
  }
 
  /**
- * \brief realiza la operacion de RESTA de dos float
+ * \brief realiza la operación de RESTA de dos float
  * \param recibe las variables
- * \param resta las variables
+ * \param result = resta las variables
  * \return el resultado de la resta de variables
  *
  */
 
- float resta(float x, float y)
+ float minusOp(float x, float y)
  {
      float result;
 
      result = x - y;
 
-     printf("Resta: %.2f \n",result);
+     printf("\nResta: %.2f \n\n",result);
 
      return result;
  }
 
  /**
- * \brief realiza la operacion de DIVISION de dos float
+ * \brief realiza la operación de DIVISIÓN de dos float
  * \param recibe las variables
  * \param valida que la segunda variable recibida (y) no sea 0
- * \param realiza la division
+ * \param result = realiza la division
  * \return el resultado de la division de variables
  *
  */
 
- float division(float x, float y)
+ float divideOp(float x, float y)
  {
      float result;
 
@@ -58,35 +60,35 @@
 
      result = x / y;
 
-     printf("Division: %.2f \n",result);
+     printf("\nDivision: %.2f \n\n",result);
 
      return result;
  }
 
  /**
- * \brief realiza la operacion de MULTIPLICACION de dos float
+ * \brief realiza la operación de MULTIPLICACION de dos float
  * \param recibe las variables
- * \param multiplica las variables
- * \return el resultado de la multiplicacion de variables
+ * \param result = multiplica las variables
+ * \return el resultado de la multiplicación de variables
  *
  */
 
- float multiplicacion(float x, float y)
+ float multiplyOp(float x, float y)
  {
      float result;
 
      result = x * y;
 
-     printf("Multiplicacion: %.2f \n",result);
+     printf("\nMultiplicacion: %.2f \n\n",result);
 
      return result;
  }
 
 /**
- * \brief realiza la operacion de FACTOREO de una variable
- * \param recibe la variable factorear en float, la convierte a int
- * \param valida que el numero no sea negativo
- * \param se hace la factorizacion
+ * \brief realiza la operación de FACTOREO de una variable
+ * \param recibe la variable en float, la convierte a int
+ * \param valida que el número no sea negativo
+ * \param se hace la factorización
  * \return el resultado del factoreo de la variable
  *
  */
@@ -106,7 +108,24 @@
         result=result*i;
     }
 
-    printf("Factoreo de %d: %.2d \n",(int)x,result);
+    printf("\nFactoreo de %d: %.2d \n\n",(int)x,result);
 
     return result;
  }
+
+/**
+* \brief si el usuario no ingresa ambos operandos, se le advierte
+* \param recibe la cantidad de veces que se han ingresado operandos
+* \param realiza la advertencia con un if
+* \return void
+*
+*/
+
+void opMissing(int x)
+{
+    if(x<2)
+    {
+        printf("\nAdvertencia. No le asigno valor a todos los operandos.\nSe le establece el valor de 0. \n \n");
+
+    }
+}
